@@ -73,3 +73,7 @@ For *crypto-sdcard*, starting with version 1.3.1, ...
            -----------> sfos321  (second field of release string: sfos321regular)
   ```
   I may convert this to the full, generic scheme, but AFAICS there is little to be gained, as there are no regular commits directly to the *sfos321* "feature & release" branch (in contrast to the *qcrypto* "feature branch"), after the initial commit creating it.  Consequently the commit flow (merge) from the *sfos321* to the *sfos321+qcrypto* branch only happened once (which is nice, because it is implicitly a merge with conflicts).
+
+#### Addendum
+[Rubdos developed](https://forum.sailfishos.org/t/release-notes-suomenlinna-4-3-0/8495/242) an elegant and technically more sophisticated implementation of this versioning scheme for compiled software, which solely relies on [a spec-file](https://gitlab.com/whisperfish/whisperfish/-/commit/05e3c9dc6abf823f1939ed8013b1d53628388bfc).
+Unfortunately, he has issues when deplying the generated RPMs, similar to the ones I occasionally observed (not initially, [all was fine then](https://github.com/mentaljam/harbour-storeman/issues/108#issuecomment-720877821), but [after half a year](https://github.com/mentaljam/harbour-storeman/issues/108#issuecomment-886225570)).
