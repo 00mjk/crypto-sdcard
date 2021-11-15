@@ -16,7 +16,8 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 ### Changed
 - In the two files **[systemd/system](https://github.com/Olf0/crypto-sdcard/tree/master/systemd/system)/cryptosd-\*@%i.service**: [Omit `PartOf=mount-cryptosd-*@%i.service`](https://github.com/Olf0/crypto-sdcard/commit/c36150eb8a6ff99f9ab2376e1a41e82a3047afb9), as it does work as intended, but fails on boot-up.
 ### Removed
-- No such file!
+- No such item.<br />
+  (Just keeping this section as a template, because it is part of the original template.)
 
 ## [Versions before 1.7.2] (2018 - 2021)
 See [original thread at TJC](https://together.jolla.com/question/179054/how-to-creating-partitions-on-sd-card-optionally-encrypted/?answer=189813#post-id-189813), 
