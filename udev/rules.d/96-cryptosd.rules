@@ -20,8 +20,8 @@ KERNEL=="mmcblk[1-9]*", ENV{DEVTYPE}=="disk", ENV{MMC_TYPE}!="?*", ENV{ID_DRIVE_
 SUBSYSTEMS=="usb", KERNEL=="mmcblk0*|sd*|sr*", ENV{DEVTYPE}=="disk", ATTR{queue/rotational}=="0", ENV{MMC_TYPE}!="?*", ENV{ID_DRIVE_FLASH_SD}="1", ENV{ID_DRIVE_MEDIA_FLASH_SD}="1"
 
 # Do not try to handle (i.e., to auto-mount) internal eMMC (ToDo: in the future also UFS & NVMe) devices with either boot areas or RPMBs:
-KERNEL=="mmcblk[0-9]", SUBSYSTEMS=="mmc", ENV{DEVTYPE}=="disk", ATTR{%kboot0/size}=="???*", ENV{CRYPTOSD_IGNORE}="1"
-KERNEL=="mmcblk[0-9]", SUBSYSTEMS=="mmc", ENV{DEVTYPE}=="disk", ATTR{%krpmb/size}=="????*", ENV{CRYPTOSD_IGNORE}="1"
+KERNEL=="mmcblk[0-9]", SUBSYSTEMS=="mmc", ENV{DEVTYPE}=="disk", ATTR{%kboot0/size}=="?*", ENV{CRYPTOSD_IGNORE}="1"
+KERNEL=="mmcblk[0-9]", SUBSYSTEMS=="mmc", ENV{DEVTYPE}=="disk", ATTR{%krpmb/size}=="??*", ENV{CRYPTOSD_IGNORE}="1"
 KERNEL=="mmcblk[0-9]??*", SUBSYSTEMS=="mmc", IMPORT{parent}="CRYPTOSD_IGNORE"
 ENV{CRYPTOSD_IGNORE}=="1", GOTO="cryptosd_end"
 
