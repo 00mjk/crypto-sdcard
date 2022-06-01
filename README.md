@@ -36,8 +36,8 @@ Thus *crypto-sdcard* solely protects "data at rest" on SD-cards and other remova
 #### Version history
 * v2.0 and later<br />
   The "key"-file path and names are ultimately settled on (please rename your "key"-files accordingly):
-  * For Cryptsetup LUKS: `/etc/crypto-sdcard/<UUID>.key`
-  * For Cryptsetup "plain": `/etc/crypto-sdcard/<device-name>.key`
+  * For Cryptsetup LUKS: `/etc/amount-encr/<UUID>`
+  * For Cryptsetup "plain": `/etc/amount-encr/<device-name>`
   * A specific `<UUID>` can be obtained by executing `blkid -c /dev/null -s UUID -o value /dev/<device-name>` with e.g. `mmcblk1p2` as `<device-name>`.
 * Releases after v1.7.1<br />
   See [CHANGELOG.md](https://github.com/Olf0/crypto-sdcard/blob/master/CHANGELOG.md#changelog) file.
